@@ -1,0 +1,19 @@
+import java.util.Arrays;
+public class MyClass {
+    public static void main(String args[]) {
+int[] tri={1,2,3,4,5};
+tr(tri);
+    }
+    static int[] tr(int[] tri){
+        if(tri.length<1){
+            return tri;
+        }
+        int[] tria=new int[tri.length-1];
+        for(int i=0;i<tri.length-1;i++){
+            tria[i]=tri[i]+tri[i+1];
+        }
+            tr(tria);
+            System.out.println(Arrays.toString(tri));
+        return tria;
+    }
+}

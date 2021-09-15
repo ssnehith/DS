@@ -1,0 +1,20 @@
+public class MyClass {
+    public static void main(String args[]) {
+      int x=123456789;
+int sum=0;
+int k=s(x,sum);
+
+      System.out.println(k);
+    }
+   static int s(int x,int sum){
+       if(x>9){
+        sum=sum+x%10;;
+        x=x/10;
+       }
+       else{
+           sum=sum+x;
+           return sum;//base condition
+       }
+       return s(x,sum);
+    }
+}

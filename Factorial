@@ -1,0 +1,15 @@
+public class MyClass {
+    public static void main(String args[]) {
+      int x=6;
+      int fac=1;
+      System.out.println(fact(x,fac));
+    }
+    static int fact(int x,int fac){
+         fac=fac*x;
+        int r=x--;
+        if(r==1){
+            return fac;
+        }
+        return fact(x,fac);
+    }
+}

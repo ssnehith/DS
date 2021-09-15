@@ -1,0 +1,15 @@
+public class MyClass {
+    public static void main(String args[]) {
+      int x=6;
+      int sum=0;
+      System.out.println(sum(x,sum));
+    }
+    static int sum(int x,int sum){
+        sum=sum+x;
+        int r=x--;
+        if(r==0){
+            return sum;
+        }
+        return sum(x,sum);
+    }
+}

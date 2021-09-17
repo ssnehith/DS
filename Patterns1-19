@@ -1,0 +1,365 @@
+public class MyClass {
+    public static void main(String args[]) {
+     pat1(5);
+     pat2(5);
+     pat3(5);
+     pat4(5);
+     pat5(5);
+     pat6(5);
+     pat7(5);
+     pat8(5);
+     pat9(5);
+     pat10(5);
+     pat11(5);
+     pat12(5);
+     pat13(5);
+     pat14(5);
+     pat15(5);
+     pat16(5);
+     pat17(5);
+     pat18(5);
+     pat19(5);
+    }
+    static void pat1(int n){
+        for(int r=1;r<=n;r++){
+            for(int c=1;c<=n;c++){
+                	System.out.print("*");
+            }
+            	System.out.println();
+        }
+    }
+    static void pat2(int n){
+        for(int r=1;r<=n;r++){
+            for(int c=1;c<=r;c++){
+                	System.out.print("*");
+            }
+            	System.out.println();
+        }
+    }
+    static void pat3(int n){
+        for(int r=1;r<=n;r++){
+            for(int c=1;c<=n-r+1;c++){
+                	System.out.print("*");
+            }
+            	System.out.println();
+        }
+    }
+    static void pat4(int n){
+        for(int r=1;r<=n;r++){
+            for(int c=1;c<=r;c++){
+                	System.out.print(c);
+            }
+            	System.out.println();
+        }
+    }
+    static void pat5(int n){
+        for(int r=1;r<=2*n-1;r++){
+            int t=r;
+            if(r>n){
+               t=2*n-t;
+            }
+            for(int c=1;c<=t;c++){
+                	System.out.print("*");
+            }
+            	System.out.println();
+        }
+    }
+    static void pat6(int n){
+        for(int r=1;r<=n;r++){
+            int sp=n-r;
+            for(int y=1;y<=sp;y++){
+                	System.out.print(" ");
+            }
+            for(int c=sp+1;c<=n;c++){
+                	System.out.print("*");
+            }
+            	System.out.println();
+        }
+    }
+     static void pat7(int n){
+        for(int r=1;r<=n;r++){
+            int sp=r;
+            for(int y=1;y<sp;y++){
+                	System.out.print(" ");
+            }
+            for(int c=sp;c<=n;c++){
+                	System.out.print("*");
+            }
+            	System.out.println();
+        }
+    }
+     static void pat8(int n){
+        for(int r=1;r<=n;r++){
+            int sp=n-r;
+            for(int c=1;c<=sp;c++){
+                	System.out.print(" ");
+            }
+            for(int c=1;c<=2*r-1;c++){
+                	System.out.print("*");
+            }
+            	System.out.println();
+        }
+    }
+     static void pat9(int n){
+        for(int r=1;r<=n;r++){
+            int sp=((2*n)-(2*r)+1);
+            for(int c=1;c<=r-1;c++){
+                	System.out.print(" ");
+            }
+            for(int c=1;c<=sp;c++){
+                	System.out.print("*");
+            }
+            	System.out.println();
+        }
+    }
+    static void pat10(int n){
+        for(int r=1;r<=n;r++){
+            int sp=n-r+1;
+            for(int y=1;y<sp;y++){
+                	System.out.print(" ");
+            }
+            for(int c=1;c<=2*r-1;c++){
+                if(c%2==0){
+                  System.out.print(" ");  
+                }
+                else{
+                	System.out.print("*");
+            }
+            }
+            	System.out.println();
+        }
+}
+  static void pat11(int n){
+        for(int r=1;r<=n;r++){
+            int sp=((2*n)-(2*r)+1);
+            for(int y=1;y<r;y++){
+                	System.out.print(" ");
+            }
+            for(int c=1;c<=sp;c++){
+                if(c%2==0){
+                  System.out.print(" ");  
+                }
+                else{
+                	System.out.print("*");
+            }
+            }
+            	System.out.println();
+        }
+}
+
+static void pat12(int n){
+    int st;
+    int sp;
+
+        for(int r=1;r<=2*n;r++){
+            if(r<=n){
+                st=((2*n)-(2*r)+1);
+                sp=r-1;
+            }
+            else{
+            st=((2*r)-(2*n)-1);
+                sp=(2*n)-r;    
+            }
+            for(int y=1;y<=sp;y++){
+                	System.out.print(" ");
+            }
+            for(int c=1;c<=st;c++){
+                if(c%2==0){
+                  System.out.print(" ");  
+                }
+                else{
+                	System.out.print("*");
+            }
+            }
+            	System.out.println();
+        }
+}
+static void pat13(int n){
+    int st;
+    int sp;
+        for(int r=1;r<=n;r++){
+           st=2*r-1; 
+           sp=n-r;
+            for(int y=1;y<=sp;y++){
+                	System.out.print(" ");
+            }
+            for(int c=1;c<=st;c++){
+                if(r==n){
+                    System.out.print("*");
+                }
+                else if(c==1||c==st){
+                  	System.out.print("*");
+                }
+                else{
+                	System.out.print(" ");
+            }
+            }
+            	System.out.println();
+        }
+}
+static void pat14(int n){
+    int st;
+    int sp;
+        for(int r=1;r<=n;r++){
+           st=((2*n)-(2*r)+1); 
+           sp=r-1;
+            for(int y=1;y<=sp;y++){
+                	System.out.print(" ");
+            }
+            for(int c=1;c<=st;c++){
+                if(r==1){
+                    System.out.print("*");
+                }
+                else if(c==1||c==st){
+                  	System.out.print("*");
+                }
+                else{
+                	System.out.print(" ");
+            }
+            }
+            	System.out.println();
+        }
+}
+static void pat15(int n){
+    int st;
+    int sp;
+    int x=1;
+        for(int r=1;r<=2*n-1;r++){
+            if(r<=n){
+           st=2*r-1; 
+           sp=n-r;
+            }
+            else{
+                st=((2*(n-x))-1);
+                sp=r-n;
+            }
+            for(int y=1;y<=sp;y++){
+                	System.out.print(" ");
+            }
+            for(int c=1;c<=st;c++){
+                if(c==1||c==st){
+                  	System.out.print("*");
+                }
+                else{
+                	System.out.print(" ");
+            }
+            }
+            if(r>n){
+                	    x=x+1;
+                	}
+            	System.out.println();
+        }
+}
+//pat16/17 not completed should again do pat15
+static void pat16(int n){
+    int sp;
+    int st;
+        for(int r=1;r<=n;r++){
+            st=2*r-1;
+            sp=n-r;
+            for(int c=1;c<=sp;c++){
+                	System.out.print(" ");
+            }
+            for(int c=1;c<=st;c++){
+                if(c==1||c==st){
+                	System.out.print("1");
+            }
+            else if(r%2==0&&c%2==0&&c<st){
+                 System.out.print(r-1);
+             }
+            else{
+                System.out.print(" ");
+            }
+            /*if(c%2==1&&c<st){
+                 System.out.print(c-1);
+             }*/
+            }
+            	System.out.println();
+        }
+}
+
+static void pat17(int n){
+        for(int r=1;r<=n;r++){
+            for(int c=1;c<=n-r;c++){
+                	System.out.print(" ");
+            }
+            for(int c=r;c>=1;c--){
+               System.out.print(c); 
+            }
+            for(int c=2;c<=r;c++){
+               System.out.print(c); 
+            }
+            	System.out.println();
+        }
+}
+static void pat18(int n){
+        for(int r=1;r<=2*n;r++){
+            if(r==1||r==2*n){
+            for(int c=1;c<=2*n;c++){
+           	System.out.print("*");
+            }
+            }
+            else if(r<=n){
+             for(int c=1;c<=2*n;c++){
+            if(c<=n-r+1){
+            System.out.print("*");   
+            }
+            else if(c>n-r+1&&c<=2*n-(n-r+1)){
+            System.out.print(" ");   
+            }
+            else if(c>2*n-(n-r+1)&&c<=2*n){
+            System.out.print("*"); 
+            }
+             }
+            }
+            else if(r>n){
+               for(int c=1;c<=2*n;c++){
+                 if(c<=r-n){
+                 System.out.print("*");
+                 }
+                 else if(c>r-n&&c<=2*n-(r-n)){
+                  System.out.print(" ");   
+                 }
+                 else{
+                    System.out.print("*"); 
+                 }
+                 }  
+               } 
+            	System.out.println();
+        }
+}
+		static void pat19(int n){
+        for(int r=1;r<=2*n-1;r++){
+             if(r<=n){
+             for(int c=1;c<=2*n;c++){
+                 if(r==n){
+            System.out.print("*");    
+            }
+            else if(c<=r){
+            System.out.print("*");   
+            }
+            else if(c>r&&c<=2*n-r){
+            System.out.print(" ");   
+            }
+            else{
+            System.out.print("*"); 
+            }
+             }
+            }
+            else if(r>n){
+               for(int c=1;c<=2*n;c++){
+                 if(c<=(2*n-r)){
+                 System.out.print("*");
+                 }
+                 else if(c>2*n-r&&c<=r){
+                  System.out.print(" ");   
+                 }
+                 else{
+                    System.out.print("*"); 
+                 }
+                 }  
+               } 
+            	System.out.println();
+        }
+}	
+}

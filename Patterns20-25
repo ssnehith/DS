@@ -1,0 +1,228 @@
+public class MyClass {
+    public static void main(String args[]) {
+        pat20(5);
+        pat21(5);
+        pat22(5);
+        pat23(5);
+        pat24(5);
+        pat25(5);
+    }
+    static void pat20(int n){
+        for(int r=1;r<=n;r++){
+               for(int c=1;c<=n-1;c++){
+                 if(r==1||r==n){
+                 System.out.print("*");
+                 }
+                 else if(c==1||c==n-1){
+                  System.out.print("*");   
+                 }
+                 else{
+                    System.out.print(" "); 
+                 }
+                 }  
+            	System.out.println();
+        }
+}
+static void pat21(int n){
+    int k=1;
+        for(int r=1;r<=n;r++){
+               for(int c=1;c<=2*r-1;c++){
+                 if(c%2==1){
+                 System.out.print(k);
+                 k++;
+                 }
+                else{
+                    System.out.print(" "); 
+                 }
+                 }  
+            	System.out.println();
+        }
+}
+static void pat22(int n){
+ int k=1;
+        for(int r=1;r<=n;r++){
+               for(int c=1;c<=2*r-1;c++){
+                if(r%2==1){
+                 if(c%2==1&&k%2==1){
+                 System.out.print(1);
+                 k++;
+                 }
+                 else if(c%2==1&&k%2==0){
+                    System.out.print(0);
+                    k++;
+                 }
+                 else{
+                    System.out.print(" "); 
+                 }
+                 }
+                 else if(r%2==0){
+                 if(c%2==1&&k%2==1){
+                 System.out.print(0);
+                 k++;
+                 }
+                 else if(c%2==1&&k%2==0){
+                    System.out.print(1);
+                    k++;
+                 }
+                 else{
+                    System.out.print(" "); 
+                 }
+                 }
+               }
+               k=1;
+            	System.out.println();
+        }
+}
+    static void pat23(int n){
+        for(int r=1;r<=n;r++){
+               for(int c=1;c<=4*n-3;c++){
+                   if(c<=n&&r%2==1){
+                 if(c==n-r+1){
+                 System.out.print("*");
+                 }
+                else{
+                    System.out.print(" "); 
+                 }
+                 }
+                 else if(c>n&&r%2==1&&c<=2*n){
+                 if(c==r+n-1){
+                 System.out.print("*");
+                 }
+                else{
+                    System.out.print(" "); 
+                 }    
+                 }
+                 //case >2n
+                 else if(c>2*n&&r%2==1&&c<3*n-r){
+                   if(c==3*n-r-1){
+                 System.out.print("*");
+                 }
+                else{
+                    System.out.print(" "); 
+                 }  
+                 }
+                  else if(c>=3*n-r&&r%2==1){
+                   if(c==(4*n+(r-n)-3)){
+                 System.out.print("*");
+                 }
+                else{
+                    System.out.print(" "); 
+                 }  
+                 }
+                 else if(r%2==0){
+                   System.out.print(" ");  
+                 }
+               }
+               
+            	System.out.println();
+        }
+}
+ static void pat24(int n){
+        for(int r=1;r<=4*n-1;r++){
+            //if row is even
+            if(r%2==0){
+                for(int c=1;c<=2*n;c++){
+                System.out.print(" ");
+            }
+            }
+            //row even end
+            else if(r<2*n&&r%2==1){
+                for(int c=1;c<=2*n;c++){
+              if(c==1||c==2*n){
+                    System.out.print("*");
+              }
+              else if(c<=n&&c==(r/2)+1){
+                  System.out.print("*");
+              }
+              else if(c>n&&c==(2*n-(r/2))){
+                  System.out.print("*");
+              }
+              else{
+                  System.out.print(" ");
+              }
+            }
+            }
+           else if(r>2*n&&r%2==1){
+                for(int c=1;c<=2*n;c++){
+              if(c==1||c==2*n){
+                    System.out.print("*");
+              }
+              else if(c<=n&&c==2*n-(r/2)){
+                  System.out.print("*");
+              }
+              
+              else if(c>n&&c==(r/2)+1){
+                  System.out.print("*");
+              }
+              
+              else{
+                  System.out.print(" ");
+              }
+                }
+            }
+             System.out.println();
+        }
+            
+}
+//******************************************************** 25 not completed
+
+static void pat25(int n){
+    int x=n;
+        for(int r=1;r<=2*n-1;r++){
+            //if row==1
+            if(r==2*n-1){
+             for(int c=1;c<=2*n-1;c++){
+                 if(c<=n){
+                	System.out.print("*");
+            }
+            else{
+               System.out.print(" "); 
+            }
+            }
+            }
+            //if row==last
+            else if(r==1){
+             for(int c=1;c<=2*n-1;c++){
+                 if(c<n){
+                	System.out.print(" ");
+            }
+            else{
+             	System.out.print("*");   
+            }
+            }
+            }
+            //if rows is even
+            else if(r%2==0){
+             for(int c=1;c<=2*n-1;c++){
+                	System.out.print(" ");
+            }   
+            }
+            //else
+            else{
+                for(int c=1;c<=2*n-1;c++){
+               if(c<=n){
+               if(c==x-1){
+                  System.out.print("*"); 
+                  x--;
+               }
+               else{
+                   System.out.print(" "); 
+               }
+           }
+           if(c>n){
+            if(c==2*x){
+                  System.out.print("*"); 
+               }
+               else{
+                   System.out.print(" "); 
+               }   
+           }
+            }
+            }
+            
+            	System.out.println();
+        }
+    }
+}
+    //*********************************************************
+    

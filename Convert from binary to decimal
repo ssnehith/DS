@@ -1,0 +1,21 @@
+public class Main
+{
+	public static void main(String[] args) {
+	    String s="1001";
+	    int base=1;
+	    int sum=0;
+      
+      /* **Integer.parseInt*/
+      
+	    int n=Integer.parseInt(s); 
+	    while(n>0){
+	        int n1=n%10;
+	        n=n/10;
+	        sum=sum+base*n1;
+	       base=2*base;
+	        
+	        
+	    }
+		System.out.println(sum);
+	}
+}

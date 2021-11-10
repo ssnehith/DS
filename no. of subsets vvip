@@ -1,0 +1,33 @@
+import java.util.*;
+import java.lang.*;
+public class Main
+{
+	public static void main(String[] args) {
+    int a[]={1,2,3};
+    System.out.println(subset(a,new ArrayList(),new ArrayList(),0));
+   
+}
+     public static ArrayList<ArrayList<Integer>> subset(int a[],ArrayList<Integer> list,ArrayList<ArrayList<Integer>> comp,int i){
+  if(i==a.length){
+      comp.add(list);
+     return comp;
+          }
+          int j=1;
+          ArrayList<Integer> temp1= new ArrayList();
+        
+          while(j>0){
+          temp1.addAll(list);
+      
+          temp1.add(a[i]);
+          
+          j--;
+          subset(a,temp1,comp,++i);
+          }
+          ArrayList<Integer> temp2= new ArrayList();
+          
+          temp2.addAll(list);
+          
+         subset(a,temp2,comp,i);
+          return comp;
+          }
+}

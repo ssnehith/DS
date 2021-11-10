@@ -1,0 +1,8 @@
+public static void subsequence(String s1,String s2,int i){
+         if(i==s1.length()){
+             System.out.println(s2);
+             return;
+         }
+         sub(s1,s2+s1.charAt(i),++i);
+         sub(s1,s2,i);
+		 }

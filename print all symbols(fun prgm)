@@ -1,0 +1,28 @@
+import java.util.*;
+import java.lang.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String up="2";
+	    per(up,"");
+	   // char digit=up.charAt(0);
+	   // System.out.print(digit);
+	   // char c='a';
+	   // for(int i=0;i<26;i++){
+	       // System.out.print((char)(2));
+	   // }
+	}
+	public static void per(String up,String pr){
+	    if(up.equals("")){
+	        System.out.print(pr+"  ");
+	        return;
+	    }
+	    int digit=up.charAt(0)-'0';
+	    
+	    for(int i=((digit-2)*3);i<(i+3);i++){
+	        char mod=(char)('a'+i);
+	        per(up.substring(1),pr+mod);
+	    }
+	    
+    }
+}
